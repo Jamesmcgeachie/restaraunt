@@ -1,5 +1,7 @@
 class Restaurant < ActiveRecord::Base
 
-	belongs_to :cuisine_type
+	has_and_belongs_to_many :cuisine_types
+
+	validates :name, presence: true
 
 end
