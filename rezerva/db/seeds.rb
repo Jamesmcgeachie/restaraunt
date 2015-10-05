@@ -8,5 +8,11 @@
 
 cuisines = ["Thai", "Italian", "Continental"]
 cuisines.each do |name|
-	CuisineType.create(name: name)
+	c = CuisineType.create(name: name)
+10.times do
+	r = Restaurant.new
+	r.name = Faker::Book.title
+	r.cuisine_types << c
+	r.save
+	end
 end

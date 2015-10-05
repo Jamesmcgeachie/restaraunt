@@ -1,0 +1,19 @@
+<h1> All Cuisine Types </h1>
+
+<table>
+<th>
+<tr>
+<td>Cusine Type</td>
+<td>Restaurants</td>
+</tr>
+</th>
+<% @cuisine_types.each do |x| %>
+
+	<tr>
+		<td><%= x.name %></td>
+		<td><%= x.restaurants.name %></td>
+	</tr>
+
+
+<% end %>
+</table>
